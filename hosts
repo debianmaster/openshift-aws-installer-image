@@ -1,0 +1,22 @@
+[OSEv3:children]
+masters
+nodes
+# Set variables common for all OSEv3 hosts
+[OSEv3:vars]
+# SSH user, this user should allow ssh based auth without requiring a password
+ansible_ssh_user=root
+# If ansible_ssh_user is not root, ansible_sudo must be set to true
+#ansible_sudo=true
+deployment_type=origin
+# host group for masters
+[masters]
+master.openshift.i63.io
+# host group for nodes
+[nodes]
+master.openshift.i63.io
+node.openshift.i63.io
+# host group for etcd
+[etcd]
+master.openshift.i63.io
+[lb]
+master.openshift.i63.io
