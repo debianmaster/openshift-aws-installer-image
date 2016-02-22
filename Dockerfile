@@ -2,7 +2,8 @@
       MAINTAINER Mateusz Pawlowski 
       RUN yum clean all && \
       yum -y install epel-release && \
-      yum -y install PyYAML python-jinja2 python-httplib2 python-keyczar python-paramiko python-setuptools git python-pip
+      yum -y install PyYAML python-jinja2 python-httplib2 python-keyczar python-paramiko python-setuptools git python-pip \
+      yum install rubygem-thor rubygem-parseconfig util-linux pyOpenSSL libffi-devel python-cryptography
       RUN mkdir /etc/ansible/
       RUN echo "[local]" > /etc/ansible/hosts ; echo "localhost" >> /etc/ansible/hosts
       RUN mkdir /opt/ansible/ -p
