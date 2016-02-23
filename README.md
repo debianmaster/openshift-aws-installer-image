@@ -28,6 +28,7 @@ Say you have two google cloud servers one master and another node like this
 
 `ansible-playbook playbooks/byo/config.yml`  
 
+> Command above should setup your master/node openshift instances
 
 
 `
