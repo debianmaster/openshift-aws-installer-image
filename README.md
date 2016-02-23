@@ -2,8 +2,8 @@
 
 #### Example steps to create a master, node on Google cloud engine
 Say you have two google cloud servers one master and another node like this
-1) master.openshift.i63.io  
-2) node.openshift.i63.io
+* master.openshift.i63.io  
+* node.openshift.i63.io
 
 #### Clone repo and build docker image
 `git clone https://github.com/debianmaster/openshift_dev_machine.git`  
@@ -25,6 +25,7 @@ Say you have two google cloud servers one master and another node like this
 #### edit your host files and run ansible scripts 
 `vi /etc/ansible/hosts`  
 > edit your master and node file references  
+
 `ansible-playbook playbooks/byo/config.yml`  
 
 
