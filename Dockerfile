@@ -18,5 +18,6 @@
       WORKDIR /ansible
       RUN git clone https://github.com/openshift/openshift-ansible.git
       WORKDIR /ansible/openshift-ansible
+      RUN pip install -e git://github.com/lorin/ansible.git#egg=ansible
       ADD hosts /etc/ansible/hosts
       
