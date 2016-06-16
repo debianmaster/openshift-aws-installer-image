@@ -19,5 +19,6 @@
       RUN git clone https://github.com/openshift/openshift-ansible.git
       WORKDIR /ansible/openshift-ansible
       RUN pip install -e git://github.com/lorin/ansible.git#egg=ansible
+      RUN pip install boto && pip install click
       ADD hosts /etc/ansible/hosts
       
