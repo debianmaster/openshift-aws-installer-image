@@ -33,8 +33,7 @@ git checkout openshift-ansible-3.0.47-6 && \
 cd ../demo-ansible 
      WORKDIR /ansible-scripts/demo-ansible
      ADD ck_workshop.pem .
-     CMD ./run.py --no-confirm --verbose --cluster-id $cluser_id --num-nodes $num_nodes \
---num-infra 1 --master-instance-type t2.large --infra-instance-type c3.xlarge \
---node-instance-type r3.large --run-smoke-tests --num-smoke-test-users 70 \
---keypair ck_workshop --r53-zone ck.osecloud.com --rhsm-user $rhsm_user \
---rhsm-pass $rhsm_pass --region us-west-2 --ami ami-775e4f16
+     ADD run.sh .
+     RUN chmod 400 ck_workshop.pem && chmod +x run.sh
+     CMD ssh-agent ./run.sh
+   
