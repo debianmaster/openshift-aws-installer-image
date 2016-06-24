@@ -12,7 +12,18 @@ cd openshift_dev_machine
 
 #### Edit your .env_sample file and rename it to .env
 ```sh
-
+AWS_ACCESS_KEY_ID=XXXXXXXXX
+AWS_SECRET_ACCESS_KEY=XXXXXX
+cluser_id=cloud
+num_nodes=2
+rhsm_pass=XXXXXXXX
+rhsm_user=XXXXXXX
+ami=ami-2051294a
+zone=us-east-1
+node_type=r3.xlarge
+master_type=t2.large
+infra_type=c3.xlarge
+users_count=40
 ```
 
 #### Build docker image   
