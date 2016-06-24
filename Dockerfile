@@ -35,5 +35,10 @@ cd ../demo-ansible
      ADD ck_workshop.pem .
      ADD run.sh .
      RUN chmod 400 ck_workshop.pem && chmod +x run.sh
+     RUN sed -i 's/ose-3.1/ose-3.2/g'  playbooks/subscriptions_and_repos.yml && \
+sed -i 's/1.8.2/1.9.1/g' ./playbooks/openshift_setup.yml && \
+sed -i 's/3.1.1.6/3.2.0.44/g' ./playbooks/openshift_setup.yml && \
+sed -i 's/ose-3.1/ose-3.2/g' ./playbooks/register_host.yml && \
+sed -i 's/enterprise-3.1.1.6/enterprise-3.2.0.44/g' ./playbooks/templates/aos.repo.j2
      CMD ssh-agent ./run.sh
    
