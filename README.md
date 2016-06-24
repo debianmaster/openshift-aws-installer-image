@@ -5,8 +5,8 @@
 
 #### Clone repo and add your aws pem file 
 ```sh
-git clone https://github.com/debianmaster/openshift_dev_machine.git 
-cd openshift_dev_machine
+git clone https://github.com/debianmaster/openshift-aws-installer-image.git
+cd openshift-aws-installer-image
 ```
 > Copy your aws pem file and rename it to *ck_workshop.pem*   
 
