@@ -41,3 +41,7 @@ docker run -d --env-file=.env --name ose_install ose_installer
 docker logs -f ose_install
 ```
 
+### To Delete the cluster
+> Goto aws Cloudformation and delete the stack that is created as part of this install 
+
+
