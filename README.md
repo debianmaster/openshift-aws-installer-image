@@ -28,12 +28,12 @@ users_count=40
 
 #### Build docker image   
 ```sh
-docker build -t "openshift_dev_machine" .
+docker build -t "ose_installer" .
 ```
 
 #### Run docker image to start the cluster deployment
 ```sh
-docker run -d --env-file=.env --name ose_install openshift_dev_machine
+docker run -d --env-file=.env --name ose_install ose_installer
 ```
 
 ### To see Progress
